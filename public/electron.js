@@ -29,13 +29,13 @@ function createWindow() {
 }
 
 const processLineByLine = async (text_field1,text_field2) =>{
-    sample_text_file_path = (isDev ? './public/Sample_MOM.txt' : `file://${path.join(__dirname, '../build/Sample_MOM.txt')}`);
+    sample_text_file_path = (isDev ? './public/Sample_MOM.txt' : path.join(process.resourcesPath,'extraResources','Sample_MOM.txt'));
     
     const fileStream = fs.createReadStream(sample_text_file_path);
     
     const rl = readline.createInterface({
         input: fileStream,
-        crlfDelay: Infinity
+        crlfDelay: Infinity 
     });
   
     lines = ""
@@ -55,7 +55,8 @@ const processLineByLine = async (text_field1,text_field2) =>{
         
         
     }
-  
+    
+    fileStream.destroy();
     return lines;
 };
 
