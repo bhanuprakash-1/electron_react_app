@@ -21,11 +21,11 @@ class App extends Component {
   
   render(){
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="App grid-container">
+        <header className="App-header item1">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Hey there, welcome to our App!
           </p>
           <a
             className="App-link"
@@ -36,9 +36,13 @@ class App extends Component {
             Learn React
           </a>
           <p>
-            {this.state.text};
+            {/* {this.state.text}; */}
           </p>
         </header>
+
+        <div className="Other-half item2">
+            <p> Cool, this is other half!!!</p>
+        </div>
       </div>
     );
   }
