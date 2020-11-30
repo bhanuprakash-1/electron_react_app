@@ -21,27 +21,17 @@ class App extends Component {
   
   render(){
     return (
-      <div className="App grid-container">
-        <header className="App-header item1">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hey there, welcome to our App!
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <p>
-            {/* {this.state.text}; */}
-          </p>
-        </header>
+      <div className="App">
+        <div className="Nav-bar">
+            <button className="home-btn">
+              Home
+            </button>
+            <button className="add-committe-btn">
+              Add committe
+            </button>
+        </div>
+        <div>
 
-        <div className="Other-half item2">
-            <p> Cool, this is other half!!!</p>
         </div>
       </div>
     );

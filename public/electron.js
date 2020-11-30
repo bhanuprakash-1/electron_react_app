@@ -14,9 +14,11 @@ const { ipcMain } = require('electron');
 let mainWindow;
 
 function createWindow() {
+  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   mainWindow = new BrowserWindow({
-      width: 900, 
-      height: 680,
+      width: width, 
+      height: height,
+      resizable:false,
       webPreferences:{
         nodeIntegration:true
       }
@@ -25,7 +27,7 @@ function createWindow() {
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   mainWindow.on('closed', () => mainWindow = null);
   
-//   mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 const processLineByLine = async (text_field1,text_field2) =>{
