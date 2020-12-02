@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainBodyContainer from './Components/MainBodyContainer.js'
 
 const electron = window.require('electron');
 const ipcRenderer = electron.ipcRenderer;
@@ -8,7 +8,8 @@ const ipcRenderer = electron.ipcRenderer;
 class App extends Component {
 
   state = {
-    text:""
+    text:"",
+    flag:true
   }
 
   componentDidMount(){
@@ -20,19 +21,19 @@ class App extends Component {
   }
   
   render(){
+      
     return (
       <div className="App">
         <div className="Nav-bar">
             <button className="home-btn">
               Home
             </button>
-            <button className="add-committe-btn">
+            <button className="add-committe-btn" >
               Add committe
             </button>
         </div>
-        <div>
 
-        </div>
+        <MainBodyContainer/>
       </div>
     );
   }

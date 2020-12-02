@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(55, 56, 57);
+  background-color: rgb(230, 10, 21);
   height: 100vh;
 }
 
@@ -15,7 +15,7 @@
   width: 5%;
   background-color: rgb(169, 136, 240);
   align-self: center;
-  
+  margin: 0.5vh;
 }
 
 .add-committe-btn {
@@ -23,8 +23,28 @@
   width: 7%;
   background-color: rgb(169, 136, 240);
   align-self: center;
+  margin: 0.5vh;
 }
 
 .home-btn:hover, .add-committe-btn:hover {
   background-color: coral;
+}
+
+.main-body {
+  background-color: darkgreen;
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.committe-list-container {
+  background-color: darkkhaki;
+  width: 20%;
+}
+
+.committe-details-container {
+  background-color: darkseagreen;
+  width: 80%;
 }
