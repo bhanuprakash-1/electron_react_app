@@ -9,7 +9,7 @@ class MainBodyContainer extends Component {
         return(
             <div className="main-body">
 
-                <CommitteListContainer/>    
+                <CommitteListContainer committeList={this.props.committeList}/>    
                 <CommitteDetailsContainer/>
                 
             </div>
