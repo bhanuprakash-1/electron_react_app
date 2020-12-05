@@ -8,7 +8,7 @@ class CommitteListContainer extends Component {
         const newCommitteList = []
         
         committeList.forEach(item => {
-            newCommitteList.push(<CommitteListItem/>)
+            newCommitteList.push(<CommitteListItem />)
         });
 
         return newCommitteList;
@@ -19,9 +19,9 @@ class CommitteListContainer extends Component {
 
         return(
             <div className="committe-list-container">  
-                <ul className="committe-list-container-ul">
-                    {committeList}  
-                </ul>                    
+            <div className="committe-list-container-ul">
+                {committeList}  
+            </div>                    
             </div>
         )
     }
