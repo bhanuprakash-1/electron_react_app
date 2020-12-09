@@ -19,11 +19,17 @@ class App extends Component {
       description:" A committe on time table issues",
       members:['Suman kundu','Bhanu Prakash', 'Anmol Reddy'],
       meetings:[] 
-    }]
+    }],
+    committe_selected:""
   }
 
   componentDidMount(){
     
+  }
+
+  select_committe = (committe_title)=>{
+    this.setState({committe_selected:committe_title});
+    console.log("Select committe named function is clicked");
   }
   
   render(){
@@ -39,7 +45,11 @@ class App extends Component {
             </button>
         </div>
 
-        <MainBodyContainer committeList={this.state.committeList}/>
+        <MainBodyContainer 
+        committeList={this.state.committeList}
+        select_committe={this.select_committe}
+        committe_selected = {this.state.committe_selected}
+        />
       </div>
     );
   }

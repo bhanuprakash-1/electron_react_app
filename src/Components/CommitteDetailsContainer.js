@@ -6,7 +6,7 @@ class CommitteDetailsContainer extends Component {
     render(){
         return(
             <div className="committe-details-container">
-                    commtiee details here goes!!
+                {this.props.committe_selected}
             </div>
         );
     }

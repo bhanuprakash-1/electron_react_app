@@ -9,8 +9,14 @@ class MainBodyContainer extends Component {
         return(
             <div className="main-body">
 
-                <CommitteListContainer committeList={this.props.committeList}/>    
-                <CommitteDetailsContainer/>
+                <CommitteListContainer 
+                    committeList={this.props.committeList}
+                    select_committe={this.props.select_committe} 
+                    committe_selected={this.props.committe_selected}
+                />    
+                <CommitteDetailsContainer
+                    committe_selected = {this.props.committe_selected}
+                />
                 
             </div>
         );
